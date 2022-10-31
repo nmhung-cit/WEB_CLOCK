@@ -1,0 +1,82 @@
+.flex-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #313131;
+    border-top: 1px solid #97979777 ;
+    z-index: 9;
+    width: 100%;
+}
+.Show{
+    position: fixed;
+    top:0;
+    opacity: 0.9;
+    animation: animationMenu 1s ;
+}
+.list-of-menu{
+    padding: 10px;
+}
+.list-of-menu >ul >li{
+    float: left;
+    margin: 20px 30px 15px 30px;
+    list-style: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.list-of-menu >ul >li> a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.4s;
+}
+.list-of-menu >ul >li>a:hover{
+    color: #fcce4f;
+    border-bottom: 1px solid #fcce4f;
+}
+.router-link-active {
+  color: #fcce4f !important;
+}
+.button-login-and-cart{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+.button-login-and-cart > span{
+    padding: 20px;
+    cursor: pointer;
+}
+.button-login-and-cart > span>img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:1px solid white ;
+}
+.cart{
+    position: relative;
+}
+.fa-user:hover{
+    color: #fcce4f !important;
+}
+.fa-shopping-cart:hover{
+    color: #fcce4f !important;
+}
+.badge{
+    position: absolute;
+    top:0px;
+    border-radius: 50%;
+    padding: 8px;
+    background: #eeb518;
+}
+@keyframes animationMenu {
+    from {top: -100%;}
+    to {top: 0;}
+  }
+
+/* tablet */
+@media all and (max-width:1023px){ 
+    .flex-menu{
+        display: none;
+    }
+}

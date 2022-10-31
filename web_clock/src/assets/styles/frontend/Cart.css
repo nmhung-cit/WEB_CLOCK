@@ -1,0 +1,142 @@
+.flex_cart{
+    display: flex;
+    margin: 0 auto;
+    max-width:1230px;
+    font-size:16px;
+}
+.flex_cart>div{
+    margin: 1%;
+}
+.flex_left{
+    width: 59%;
+}
+.flex_right{
+    width: 40%;
+    box-shadow: 0px 0px 5px rgb(119, 119, 119);
+    padding: 1em;
+}
+.fa-window-close:hover{
+    color: rgb(182, 180, 180);
+}
+.image{
+    max-width: 60px;
+    padding-left:0.2em ;
+}
+.nameproduct{
+    width: 36%; 
+}
+.input_price>input{
+    width: 3em;
+    outline: none;
+}
+th{
+    border-bottom: 2px solid rgb(167, 167, 167);  
+}
+td,th{
+    padding: 0.3em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+td{
+    border-bottom: 1px solid rgb(167, 167, 167); 
+    font-weight: 600;
+}
+.btn_uploadcart{
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    background: none;
+    transition: all 0.6s;
+}
+.btn_uploadcart:hover{
+    background: black;
+    color: white;
+}
+.title{
+    width: 40%;
+    padding: 1em;
+}
+.result{
+    width: 60%;
+    text-align: right;
+}
+.input_discount>input{
+    margin: 6px 0 0 0 ;
+    padding: 6px;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgb(161, 161, 161);
+    transition: all 0.6s;
+}
+.input_discount>input[type=text]:focus{
+    box-shadow: 0 0 3px rgb(117, 117, 117);
+}
+.input_discount>input[type=button]:hover{
+    background: rgb(214, 214, 214);
+}
+.btn_checked{
+    border: none;
+}
+.btn_checked>input{
+    margin-top:10px ;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    background: rgb(255, 235, 52);
+    transition: all 0.6s;
+}
+.btn_checked>input:hover{
+    background: rgb(168, 152, 5);
+}
+.note_cart{
+    padding: 10px;
+    width: 100%;
+    height: 600px;
+    background: rgb(240, 240, 240);
+    text-align: center;
+    cursor: pointer;
+    transition:all 0.6s ;
+    border-radius:10px ;
+}
+.note_cart:hover{
+    padding: 20px;
+}
+.apple-name-none{
+    display:none;
+}
+table{
+    width: 100%;
+}
+@media all and (max-width:840px){
+    .flex_cart{
+        flex-direction: column;
+        align-items: center;
+    }
+    .flex_cart>div{
+        width: 90%;
+    }
+    .apple{
+        display: none;
+    }
+    .apple-name{
+        display: none;
+    }
+    .apple-name-none{
+        display: table-cell;
+        width: 50%;
+    }
+    .apple-name-none>span{
+        color: rgb(255, 166, 0);
+    }
+}
+@media all and (max-width:360px){
+    .flex_cart{
+        font-size:11px;
+    }
+    .btn_checked>input{
+        font-size: 14px;
+    }
+}

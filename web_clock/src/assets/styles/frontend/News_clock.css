@@ -1,0 +1,115 @@
+.body{
+    margin: auto;
+    max-width: 1230px;
+}
+.title{
+    text-align: center;
+    padding: 40px;
+}
+.flex_news{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+.flex_news>div{
+    margin: 6px;
+}
+.flext_left{
+    width: 20%;
+}
+.flext_right{
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.category-menu>p{
+    padding: 20px 0px 20px 0px;
+    font-weight: bold;
+}
+.show-all-news{
+    width: 100%;
+    border: solid 1px rgb(199, 198, 198);
+    border-radius: 10px;
+    background: #fafafa; 
+}
+.news-menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px rgb(199, 198, 198);
+}
+.news-menu:last-of-type{
+    border:none;
+}
+.news-menu>div{
+    padding:6px ;
+}
+.img-news{
+    width: 30%;
+}
+.img-news>img{
+    width: 100%;
+}
+.title-news{
+    width: 70%;
+    font-size: 1rem;
+}
+.title-news:hover{
+    color: #fcce4f;
+    cursor: pointer;
+}
+.news{
+    width: 31.1%;
+    border:1px solid rgb(129, 129, 129);
+    margin: 1%;
+    transition: all 0.3s;
+}
+.news:hover .titleNews{
+    color: rgb(250, 166, 11);
+}
+.news:hover{
+    box-shadow: 0 0 6px rgb(100, 100, 100);
+}
+.imageNews>img{
+    width: 100%;
+}
+.titleNews{
+    padding:10px 0px 5px 0px;
+    width:90%;
+    margin: auto;
+    font-weight: 600;
+    border-bottom: 3px dashed  rgb(129, 129, 129) ;
+    transition: all 0.3s;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow:hidden
+}
+.content{
+    padding:10px 0px 5px 0px;
+    width:90%;
+    overflow: hidden;
+    margin: auto;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+@media all and (max-width:840px){
+    .flex_news{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .flext_right{
+        width: 90%;
+        flex-direction: column;
+    }
+    .flext_left{
+        width: 90%;
+    }
+    .news{
+        width: 100%;
+        margin-top: 20px;
+    }
+}

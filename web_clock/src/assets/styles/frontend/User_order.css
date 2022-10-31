@@ -1,0 +1,132 @@
+*{
+    background: rgb(241, 241, 241);  
+  }
+  table{
+      width: 100%;
+      margin-top:2.2em ;
+  }
+  th{
+      background: white;
+      border-bottom: 1px solid rgb(206, 206, 206);
+  }
+  tr>td, tr>th{
+      padding: 1.2em !important;
+  }
+  td{
+      background: white;
+      padding: 10px 0px;
+      border-bottom: 1px solid rgb(206, 206, 206);
+  }
+  td>img{
+      width: 80px;
+      border:1px solid black
+  }
+  td>button{
+      border: none;
+      padding: 0.6em;
+      background: rgb(248, 206, 19);
+      color: white;
+  }
+  .content>p{
+      background: white !important;
+      margin: 0;
+  }
+  .name-watch{
+      font-weight: 500;
+  }
+  .type_watch{
+      color: rgb(172, 172, 172);
+  }
+  .user-order{
+    max-width: 1230px;
+    margin:0 auto;
+    padding-bottom:60px ;
+  }
+  .user-order>h2{
+      color: rgb(221, 189, 4);
+      text-align: center;
+      padding: 20px;
+  }
+  .wrapper{
+      width: 100%;
+      font-size:16px;
+      padding:1em;
+  }
+  .Messages{
+      font-size: 26px;
+      font-weight: 600px;
+      text-align: center;
+      line-height: 400px;
+      height: 400px;
+  }
+  .wrapper-status-order{
+      width: 100%;
+      overflow: auto;
+  }
+  .wrapper-status-order::-webkit-scrollbar{
+    display: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .status_order{
+      width: 100%;
+      min-width: 640px;
+  }
+  .status_order>button{
+      width: 20%;
+      padding: 16px;
+      background: white;
+      border: none;
+      font-size: 1em;
+      transition: color 0.6s;
+  }
+  .status_order>button:hover{
+      color: rgb(255, 208, 0);
+      border-bottom:2px solid rgb(255, 208, 0);
+  }
+  .btn_order{
+      color: rgb(255, 208, 0) !important;
+      border-bottom:2px solid rgb(255, 208, 0) !important;    
+  }
+  .order{
+      width: 100%;
+      margin: auto;
+  }
+  .not_order{
+      margin-top: 20px;
+      text-align: center;
+      height: 400px;
+  }
+  .showtextReview{
+      text-align: center;
+      font-weight: 600;
+      background: none;
+      color: rgb(255, 166, 0);
+      max-width: 90px;
+      font-size: 0.8em;
+  }
+  .textPrice{
+      width: 160px;
+  }
+  @media all and (max-width:640px){
+      .wrapper{
+          font-size:13px;
+          padding: 0;
+      }
+  }
+  @media all and (max-width:440px){
+    .wrapper{
+        font-size:11px;
+        padding: 0;
+    }
+    td>img{
+        width: 60px;
+        border:1px solid black
+    }
+}
+@media all and (max-width:340px){
+    .wrapper{
+        font-size:8px;
+        padding: 0;
+    }
+}

@@ -1,0 +1,224 @@
+.header-container{
+    background: #030000;
+}
+.flex-header{
+    display: flex;
+    max-width: 1230px;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin: 0 auto;
+}
+.flex-header > div{
+    padding: 20px;
+}
+.logo-header{
+    width: 25%;
+}
+.logo-header > img{
+    max-width: 100%;
+    cursor: pointer;
+}
+.search-product{
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-product > input{
+    width: 70%;
+    height: 40px;
+    border-radius: 8px 0px 0px 8px;
+    border: none;
+}
+.search-product > input[type = text] {
+    outline: none;
+    padding-left:10px; 
+    background: #272727;
+    color: white !important;
+}
+.search-product > input[type = text]::placeholder {
+  color: white;
+}
+.search-product > input[type = text]:focus{
+    box-shadow: 0 0 6px rgb(252, 202, 39);
+}
+.search-product > button{
+    width: 50px;
+    height: 40px;
+    border-radius: 0px 8px 8px 0px;
+    border: none;
+    background: rgb(253, 152, 37);
+}
+.search-product > button:hover{
+    background: #fcce4f;
+    cursor: pointer;
+}
+.button-login-and-cart{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+    color: white;
+}
+.button-login-and-cart > span{
+    padding: 20px;
+    cursor: pointer;
+}
+.button-login-and-cart > span>img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:1px solid #fcce4f ;
+}
+.cart{
+    position: relative;
+}
+.badge{
+    position: absolute;
+    top:0px;
+    border-radius: 50%;
+    padding: 8px;
+    background: #eeb518;
+}
+.fa-user:hover{
+    color: #fcce4f !important;
+}
+.fa-shopping-cart:hover{
+    color: #fcce4f !important;
+}
+.nav_bars-btn{
+    width: 25%;
+    color: white ;
+    display: none;
+}
+.fa-bars:hover{
+    color: #fcce4f;
+    cursor: pointer;
+}
+.nav_overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:rgba(0 , 0 , 0 , 0.3);
+    z-index: 999;
+    display:none;
+    animation: fadeIn linear 0.3s;
+}
+.menu_btn-close{
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    color:rgb(148, 148, 148);
+    cursor: pointer;
+}
+.menu_btn-close:hover{
+    color:red;
+}
+.list-of-menu{
+    padding:50px 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color:rgb(253, 253, 253);
+    opacity: 0;
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: transform linear 0.3s, opacity linear 0.3s;
+    
+}
+.list-of-menu>ul{
+    padding-top: 30px;
+}
+.list-of-menu>ul>li{
+    border-top: 1px solid rgb(175, 175, 175);
+    list-style: none;
+}
+.list-of-menu>ul>li:hover{
+    background-color:rgb(218, 218, 218);
+}
+.list-of-menu>ul>li>a{
+    text-decoration: none;
+    color: rgb(138, 138, 138);
+    display:block;
+    font-weight: bold;
+    font-size: 16px;
+    padding:20px 10px;
+}
+.menu_input-shearch{
+    width: 100%;
+    padding:6px;
+    border: 1px solid #ddd;
+    outline: none;
+    color:black !important;
+    background-color:rgba(0,0,0,0.03);
+    border-radius: 20px;
+    margin-right: -40px;
+}
+.menu_btn-shearch{
+    padding:6px;
+    border:none;
+    background:transparent ;
+    margin: 0 ;
+}
+#mobile-input{
+    display:none;
+}
+#mobile-input:checked ~ .nav_overlay{
+    display:block;
+}
+#mobile-input:checked ~.list-of-menu{
+    transform: translateX(0);
+    opacity: 0.9;
+}
+@keyframes fadeIn {
+    from { opacity:0}
+    to { opacity:1}
+}
+@keyframes animationMenu {
+    from {top: -100%;}
+    to {top: 0;}
+  }
+/* tablet */
+@media all and (max-width:1023px){
+    .nav_bars-btn{
+        display: block;
+    }
+    .logo-header{
+        width: 50%;
+    }
+    .search-product{
+        display: none;
+    }
+    .button-login-and-cart > span>img{
+        display: none;
+    }
+    .Show{
+        width: 100%;
+        position: fixed;
+        top:0;
+        animation: animationMenu 1s ;
+        background-color: black;
+        z-index: 99;
+    }
+    .flex-header{
+        height:60px;
+        justify-content: space-between;
+        box-shadow: 0px 6px 10px #747474;
+    }
+    .flex-header > div{
+        padding: 0 20px;
+    }
+    .logo-header{
+        height: 60px;
+        width: 160px;
+    }
+}
+/* apple */
+@media all and (max-width:740px){
+
+}
