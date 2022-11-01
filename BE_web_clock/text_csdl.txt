@@ -1,0 +1,112 @@
+ 1)Admin:
++ID: id admin(tự động tăng,khóa chính)
++name: tên người quản trị
++username:tên tài khoản
++password:mật khẩu
++email:email
+
+2)user:
++ID:id người dùng(Khóa chính, tự động tăng)
++name:tên người dùng
++username:tên tài khoản
++password:mật khẩu
++email:địa chỉ mail người dùng
++data-time:thời gian đăng ký
+
+3)Product:
++ID:id sản phẩm(khóa chính, tự động tăng)
++name:tên sản phẩm
++image:hình ảnh sản phẩm
++type-product:Loại sản phẩm(0:đồng hồ nam,1:đồng hồ nữ)
++price:giá sản phẩm
++Description:mô tả sản phẩm
++trademark:thương hiệu sản phẩm
++status:trang thái sản phẩm(0:còn hàng,1:hết hàng)
++data-time:thời gian tạo
+
+4)ProductDetail:
++id_productDetail: Khóa chính, tự động tăng
++id_product: id sản phẩm (khóa phụ)
++batery: pin
++material: Vật liệu dây đồng hồ
++material_glass: vật liệu kính
++glass_shape: hình dạng mặt kính
++glass_size: kính thước mặt kính
++waterproof_lever: mức độ chống nước
++color: màu sắc
++origin: xuất xứ
+
+5)PromotionProduct:
++id_promotion: khóa chính (tự động tăng)
++id_product: id sản phẩm (khóa phụ)
++price_promotion: giá khuyến mãi
+
+6)image_product
++id_image:khóa chính (tự động tăng)
++id_product: id sản phẩm (khóa phụ)
++images: hình ảnh
++Descriptions:Mô tả hình ảnh
+
+7)ProductReviews:
++id_reviews:khóa chính (tự động tăng)
++id_product:id sản phẩm (khóa phụ)
++id_user:id người dùng(khóa phụ)
++star: sao đánh giá (1,2,3,4,5)
++comment: bình luận sản phẩm
++feedback: phản hồi của admin
+
+8)Cart:
++id:id giỏ hàng(Khóa chính, tự động tăng)
++id_product:id sản phẩm(khóa phụ)
++id_user:id người dùng(khóa phụ)
++colors: màu sắc sản phẩm
++quantity:số lượng sản phẩm
+
+9)shipmentDetails:
+id_shipment_Details: id thông tin chi tiết nhận hàng(Khóa chính, tự động tăng)
++id_user:id người dùng(khóa phụ)
++surname: Họ người dùng
++name: tên người dùng
++phone_number:số điện thoại
++city_province: tỉnh thành phố
++district: quận, huyện
++wards: Phường, xã
++address:địa chỉ cụ thể
+
+10)order:
++id_order: khóa chính(tự động tăng)
++id_user: id người dùng (khóa phụ)
++id_shipment_Details:id địa chỉ giao hàng(khóa phụ)
++note:ghi chú
++status: trạng thái
+
+11)orderDetails
++id_orderdetails: khóa chính (tự động tăng)
++id_order: id đơn hàng(khóa phụ)
++id_product:id sản phẩm (khóa phụ)  
++color:màu sắc sản phẩm 
++totalmoney:tổng số tiền
++quantity:sô lượng sản phẩm
+
+12)news
++id_news:khóa chính(tự động tăng)
++image:hình ảnh tin tức
++title: tiêu đề 
++content: nôi fung
+
+13)insurance
++id_insurances: khóa chính (tự động tăng)
++id_product: id sản phẩm (khóa phụ)
++content: nội dung
+
+14)slides
++id_slide
++image
+
+index(): Điều khiển hiển thị danh sách dữ liệu.
+create(): Điều khiển trang insert dữ liệu.
+store(Request $request): Thực hiện việc insert dữ liệu.
+show($id): Hiển thị dữ liệu riêng biệt dựa theo $id.
+edit($id): Hiển thị trang cập nhật dữ liệu.
+update(Request $request, $id): Thực thi việc cập nhật dữ liệu.
+destroy($id): Xóa dữ liệu.
